@@ -31,7 +31,7 @@ def handler(ctx, data: io.BytesIO=None):
     model_dir = os.path.dirname(os.path.realpath(__file__))
     contents = os.listdir(model_dir)
     if filename in contents:
-        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), model_file_name), "rb") as file:
+        with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), filename), "rb") as file:
             loaded_model = pickle.load(file)
         result = loaded_model.predict(testing)
     else:
