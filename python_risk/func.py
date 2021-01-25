@@ -214,7 +214,18 @@ def handler(ctx, data: io.BytesIO=None):
       investmentObjectiveML = 2
     else:
       investmentObjectiveML = 0
-
+    
+    if investmentApproach == 'Sell all the investments and saved the remaining money':
+      investmentApproachML = 1
+    elif investmentApproach == 'Sell portion of your portfolio which is still in profit to recover the losses':
+      investmentApproachML = 2
+    elif investmentApproach == 'Hold you portfolio and wait to recover':
+      investmentApproachML = 3
+    elif investmentApproach == 'Buy more to lower your average of investments':
+      investmentApproachML = 4
+    else:
+      investmentApproachML = 0
+    
     if nonPerformingPortfolio == 'upto 3 months':
       nonPerformingPortfolioML = 1
     elif nonPerformingPortfolio == 'upto 6 month':
