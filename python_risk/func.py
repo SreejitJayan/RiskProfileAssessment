@@ -81,13 +81,13 @@ def handler(ctx, data: io.BytesIO=None):
       pensionML = 0
 
     if primarySourceOfIncome == 'Salaried':
-      primarySourceOfIncomenML = 3
+      primarySourceOfIncomeML = 3
     elif primarySourceOfIncome == 'Pension':
-      primarySourceOfIncomenML = 1
+      primarySourceOfIncomeML = 1
     elif primarySourceOfIncome == 'Business':
-      primarySourceOfIncomenML = 2
+      primarySourceOfIncomeML = 2
     else:
-      primarySourceOfIncomenML = 0
+      primarySourceOfIncomeML = 0
 
     if retired == 'Yes':
       retiredML = 1
